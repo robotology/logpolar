@@ -23,7 +23,7 @@ icubcontrib_set_default_prefix()
 add_definitions(${YARP_DEFINES})
 
 add_subdirectory(lib)
-#add_subdirectory(yarp-plugin)
+add_subdirectory(plugins)
 add_subdirectory(modules)
 
 icubcontrib_finalize_export(logpolar)
