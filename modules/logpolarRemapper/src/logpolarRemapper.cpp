@@ -86,7 +86,6 @@ This file can be edited at src/logpolarRemapper/logpolarRemapper.cpp.
 
 // default.
 #include <cstdio>
-#include <cmemory>
 #include <string>
 
 // yarp.
