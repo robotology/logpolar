@@ -15,4 +15,4 @@ target_link_libraries(logpolargrabber logpolar ${YARP_LIBRARIES})
 
 yarp_install(FILES logpolargrabber.ini
              COMPONENT runtime
-             DESTINATION ${YARP_PLUGIN_MANIFESTS_INSTALL_DIR})
+             DESTINATION ${ICUBCONTRIB_PLUGIN_MANIFESTS_INSTALL_DIR})

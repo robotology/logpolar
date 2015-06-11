@@ -2,6 +2,7 @@
 # Authors: Ugo Pattacini
 # CopyPolicy: Released under the terms of the GNU GPL v3.0.
 
+yarp_configure_external_installation(ICUBcontrib)
 include(YarpPlugin)
 
 add_subdirectory(logpolarClient)
