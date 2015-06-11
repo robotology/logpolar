@@ -28,8 +28,7 @@ module. It creates also ports for rpc commands (to the module) and rpc commands 
 the remote interfaces).
 
 \section lib_sec Libraries
-The logpolarRemapper depends on the iCubDev and logPolar  
-libraries.  
+The logpolarRemapper depends on the logPolar library.
 
 \section parameters_sec Parameters
 \code
