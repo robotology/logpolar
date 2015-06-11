@@ -1,0 +1,69 @@
+\section{i\+Cub\+:\+:logpolar\+:\+:cart2\+Lp\+Pixel Struct Reference}
+\label{structiCub_1_1logpolar_1_1cart2LpPixel}\index{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel@{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel}}
+
+
+It contains the look-\/up table for the creation of a log polar image.  
+
+
+
+
+{\ttfamily \#include $<$R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{structiCub_1_1logpolar_1_1cart2LpPixel_ad3d40afcf0194c2333729044a0b10d3a}{divisor}
+\begin{DoxyCompactList}\small\item\em Number of cartesian pixels corresponding to the current log polar one. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{structiCub_1_1logpolar_1_1cart2LpPixel_ad1672ced4db91126ae43b5fa27e3033e}{iweight}
+\begin{DoxyCompactList}\small\item\em Array containing the weight of each cartesian pixel. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{structiCub_1_1logpolar_1_1cart2LpPixel_a4fe110e9885ce107c9d8f82ca12e204a}{position}
+\begin{DoxyCompactList}\small\item\em Array containing the position of each cartesian pixel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+It contains the look-\/up table for the creation of a log polar image. 
+
+Definition at line 84 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+
+\subsection{Field Documentation}
+\index{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel@{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel}!divisor@{divisor}}
+\index{divisor@{divisor}!i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel@{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel}}
+\subsubsection[{divisor}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel\+::divisor}\label{structiCub_1_1logpolar_1_1cart2LpPixel_ad3d40afcf0194c2333729044a0b10d3a}
+
+
+Number of cartesian pixels corresponding to the current log polar one. 
+
+
+
+Definition at line 86 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+\index{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel@{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel}!iweight@{iweight}}
+\index{iweight@{iweight}!i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel@{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel}}
+\subsubsection[{iweight}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel\+::iweight}\label{structiCub_1_1logpolar_1_1cart2LpPixel_ad1672ced4db91126ae43b5fa27e3033e}
+
+
+Array containing the weight of each cartesian pixel. 
+
+
+
+Definition at line 87 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+\index{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel@{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel}!position@{position}}
+\index{position@{position}!i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel@{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel}}
+\subsubsection[{position}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel\+::position}\label{structiCub_1_1logpolar_1_1cart2LpPixel_a4fe110e9885ce107c9d8f82ca12e204a}
+
+
+Array containing the position of each cartesian pixel. 
+
+~\newline
+ Note that the plane information is included in this field (i.\+e. when only one plane is present it contains the value ({\ttfamily y$\ast$x\+Size+x}), while in case of three planes, the value will be {\ttfamily 3$\ast$}({\ttfamily y$\ast$xize+x}) ). 
+
+Definition at line 88 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/dev/icub-\/contrib-\/iit/logpolar/lib/include/i\+Cub/logpolar/\hyperlink{RC__DIST__FB__logpolar__mapper_8h}{R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h}\end{DoxyCompactItemize}

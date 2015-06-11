@@ -1,0 +1,98 @@
+\section{logpolar\+Transform}
+\label{group__icub__logpolarTransform}\index{logpolar\+Transform@{logpolar\+Transform}}
+
+
+Perform a log-\/polar transform on an input image and generate a transformed output image.  
+
+
+Perform a log-\/polar transform on an input image and generate a transformed output image. 
+
+The direction of the transform, from Cartesian to log-\/polar or vice versa, is specified by a flag in the configuration file. The default direction is Cartesian to log-\/polar. The parameters of the transform, i.\+e. the number of angles, the number of rings, and the overlap of the receptive fields are specified in the configuration file. The default number of angles and rings is 252 and 152, respectively. The default overlap is 1.\+0.\hypertarget{group__icub__logpolarTransform_lib_sec}{}\subsection{Libraries}\label{group__icub__logpolarTransform_lib_sec}
+Y\+A\+R\+P.\hypertarget{group__icub__logpolarTransform_parameters_sec}{}\subsection{Parameters}\label{group__icub__logpolarTransform_parameters_sec}
+{\bfseries Command-\/line Parameters}
+
+The following key-\/value pairs can be specified as command-\/line parameters by prefixing {\ttfamily --} to the key (e.\+g. {\ttfamily --from} file.\+ini). The value part can be changed to suit your needs; the default values are shown below.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily from} {\ttfamily logpolar\+Transform.\+ini} ~\newline
+ specifies the configuration file
+\item {\ttfamily context} {\ttfamily Log\+Polar\+Transform} ~\newline
+ specifies the sub-\/path from {\ttfamily \$\+I\+C\+U\+B\+\_\+\+R\+O\+O\+T/app} to the configuration file
+\item {\ttfamily name} {\ttfamily Log\+Polar\+Transform} ~\newline
+ specifies the name of the module (used to form the stem of module port names)
+\end{DoxyItemize}
+
+{\bfseries Configuration File Parameters}
+
+The following key-\/value pairs can be specified as parameters in the configuration file (they can also be specified as command-\/line parameters if you so wish). The value part can be changed to suit your needs; the default values are shown below.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily image\+Input\+Port} {\ttfamily /image}\+:i ~\newline
+ specifies the input port name (this string will be prefixed by {\ttfamily /\+Log\+Polar\+Transform} or whatever else is specifed by the name parameter
+\item {\ttfamily image\+Output\+Port} {\ttfamily /image}\+:o ~\newline
+ specifies the input port name (this string will be prefixed by {\ttfamily /\+Log\+Polar\+Transform} or whatever else is specifed by the name parameter
+\item {\ttfamily direction} {\ttfamily C\+A\+R\+T\+E\+S\+I\+A\+N2\+L\+O\+G\+P\+O\+L\+A\+R} ~\newline
+ specifies the direction of the tranform; the alternative direction is L\+O\+G\+P\+O\+L\+A\+R2\+C\+A\+R\+T\+E\+S\+I\+A\+N
+\item {\ttfamily angles} {\ttfamily 252} ~\newline
+ specifies the number of receptive fields per ring (i.\+e. the number of samples in the theta/angular dimension); required for C\+A\+R\+T\+E\+S\+I\+A\+N2\+L\+O\+G\+P\+O\+L\+A\+R transform direction
+\item {\ttfamily rings} {\ttfamily 152} ~\newline
+ specifies the number of rings (i.\+e. the number of samples in the r dimension); required for C\+A\+R\+T\+E\+S\+I\+A\+N2\+L\+O\+G\+P\+O\+L\+A\+R transform direction
+\item {\ttfamily xsize} {\ttfamily 320} ~\newline
+ specifies the number of samples in the X dimension; required for L\+O\+G\+P\+O\+L\+A\+R2\+C\+A\+R\+T\+E\+S\+I\+A\+N transform direction
+\item {\ttfamily ysize} {\ttfamily 240} ~\newline
+ specifies the number samples in the Y dimension; required for L\+O\+G\+P\+O\+L\+A\+R2\+C\+A\+R\+T\+E\+S\+I\+A\+N transform direction
+\item {\ttfamily overlap} {\ttfamily 1.\+0} ~\newline
+ specifies the relative overlap of each receptive field
+\end{DoxyItemize}\hypertarget{group__icub__logpolarTransform_portsa_sec}{}\subsection{Ports Accessed}\label{group__icub__logpolarTransform_portsa_sec}
+
+\begin{DoxyItemize}
+\item None
+\end{DoxyItemize}\hypertarget{group__icub__logpolarTransform_portsc_sec}{}\subsection{Ports Created}\label{group__icub__logpolarTransform_portsc_sec}
+{\bfseries Input ports}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily /logpolar\+Transform} ~\newline
+ This port is used to change the parameters of the module at run time or stop the module The following commands are available
+\item help ~\newline
+
+\item quit ~\newline
+ Note that the name of this port mirrors whatever is provided by the {\ttfamily --name} {\ttfamily parameter} {\ttfamily value} The port is attached to the terminal so that you can type in commands and receive replies. The port can be used by other modules but also interactively by a user through the yarp rpc directive, viz.\+: yarp rpc /\+Log\+Polar\+Transform This opens a connection from a terminal to the port and allows the user to then type in commands and receive replies.
+\item /logpolar\+Transform/image\+:i
+\end{DoxyItemize}
+
+{\bfseries Output ports}
+
+
+\begin{DoxyItemize}
+\item {\ttfamily /logpolar\+Transform} see above
+\item {\ttfamily /logpolar\+Transform/image}\+:o
+\end{DoxyItemize}
+
+{\bfseries Port types }
+
+The functional specification only names the ports to be used to communicate with the module but doesn\textquotesingle{}t say anything about the data transmitted on the ports. This is defined by the following code.
+
+
+\begin{DoxyItemize}
+\item {\ttfamily Buffered\+Port$<$Image\+Of$<$\+Pixel\+Rgb$>$} $>$ {\ttfamily image\+Input\+Port};
+\item {\ttfamily Buffered\+Port$<$Image\+Of$<$\+Pixel\+Rgb$>$} $>$ {\ttfamily image\+Output\+Port};
+\end{DoxyItemize}\hypertarget{group__icub__logpolarTransform_in_files_sec}{}\subsection{Input Data Files}\label{group__icub__logpolarTransform_in_files_sec}
+None\hypertarget{group__icub__logpolarTransform_out_data_sec}{}\subsection{Output Data Files}\label{group__icub__logpolarTransform_out_data_sec}
+None\hypertarget{group__icub__logpolarTransform_conf_file_sec}{}\subsection{Configuration Files}\label{group__icub__logpolarTransform_conf_file_sec}
+{\ttfamily logpolar\+Transform.\+ini} in {\ttfamily \$\+I\+C\+U\+B\+\_\+\+R\+O\+O\+T/app/logpolar\+Transform/conf} \hypertarget{group__icub__logpolarTransform_tested_os_sec}{}\subsection{Tested O\+S}\label{group__icub__logpolarTransform_tested_os_sec}
+Windows\hypertarget{group__icub__logpolarTransform_example_sec}{}\subsection{Example Instantiation of the Module}\label{group__icub__logpolarTransform_example_sec}
+{\ttfamily logpolar\+Transform --name log\+Polar\+Transform --context logpolar\+Transform --from lp2cart.\+ini } {\ttfamily logpolar\+Transform --name logpolar\+Transform --context logpolar\+Transform --from cart2lp.\+ini }
+
+\begin{DoxyAuthor}{Author}
+
+\end{DoxyAuthor}
+David Vernon
+
+Copyright (C) 2009 Robot\+Cub Consortium
+
+Copy\+Policy\+: Released under the terms of the G\+N\+U G\+P\+L v2.\+0.
+
+This file can be edited at \$\+I\+C\+U\+B\+\_\+\+R\+O\+O\+T/src/logpolar\+Transform/include/i\+Cub/log\+Polar\+Transform.h 

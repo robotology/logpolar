@@ -1,0 +1,35 @@
+\section{logpolar}
+\label{group__logpolarLibrary}\index{logpolar@{logpolar}}
+
+
+A complete (more or less) logpolar sampling library.  
+
+
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelogpolar}{logpolar}
+\begin{DoxyCompactList}\small\item\em The logpolar library namespace and some utility functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage}{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}
+\begin{DoxyCompactList}\small\item\em A logpolar grabber interface; it behaves like the standard grabber but with specialization for logpolar images. \end{DoxyCompactList}\item 
+class \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform}{i\+Cub\+::logpolar\+::logpolar\+Transform}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform}{logpolar\+Transform} class; a simple collection of logpolar mapping functions, methods, tables, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A complete (more or less) logpolar sampling library. 
+
+Somewhat inspired by the L\+I\+R\+A-\/\+Lab Giotto sensor, this library creates an optimized logpolar mapping and provides functionality to manipulate logpolar images.
+
+\begin{DoxyAuthor}{Author}
+Giorgio Metta starting from code by Fabio Berton.
+\end{DoxyAuthor}
+Copyright (C) 2010 Robot\+Cub Consortium
+
+Copy\+Policy\+: Released under the terms of the G\+N\+U G\+P\+L v2.\+0.\hypertarget{group__icub__logpolarRemapper_intro_sec}{}\subsection{Description}\label{group__icub__logpolarRemapper_intro_sec}
+This library, put simply, takes images in cartesian format (regular) as from native cameras and transform them in logpolar format. The mapping is implemented (bidirectionally) via lookup tables.
+
+Examples modules can be found in \hyperlink{group__icub__logpolarTransform}{logpolar\+Transform}. 

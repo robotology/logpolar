@@ -1,0 +1,135 @@
+\section{yarp\+:\+:dev\+:\+:I\+Logpolar\+Frame\+Grabber\+Image Class Reference}
+\label{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage}\index{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}}
+
+
+A logpolar grabber interface; it behaves like the standard grabber but with specialization for logpolar images.  
+
+
+
+
+{\ttfamily \#include $<$Logpolar\+Interfaces.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a4adb5af9e66c11d5ac044ac3cda8d27a}{necc} (void) const =0
+\begin{DoxyCompactList}\small\item\em get the number of eccentricities. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a5ed45249a89ab14317711f3a7b805805}{nang} (void) const =0
+\begin{DoxyCompactList}\small\item\em get the number of angles. \end{DoxyCompactList}\item 
+virtual double \hyperlink{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a5d11be9916d9d4bdddd0c6f44f066de8}{overlap} (void) const =0
+\begin{DoxyCompactList}\small\item\em get the overlap between receptive fields. \end{DoxyCompactList}\item 
+virtual int \hyperlink{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a45024b93bf7734166f69b65f997379ac}{fovea} (void) const =0
+\begin{DoxyCompactList}\small\item\em get the fovea size (in pixels). \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a8c95330ca7dfdea6b5abf8e3d8c238d8}{get\+Logpolar\+Image} (yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&image)=0
+\begin{DoxyCompactList}\small\item\em get the logpolar image. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a981721bc337b26a92d4ae3c96024de0d}{get\+Foveal\+Image} (yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&image)=0
+\begin{DoxyCompactList}\small\item\em get the foveal image (a small part of the centre of the image in full resolution). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A logpolar grabber interface; it behaves like the standard grabber but with specialization for logpolar images. 
+
+Definition at line 51 of file Logpolar\+Interfaces.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}!fovea@{fovea}}
+\index{fovea@{fovea}!yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}}
+\subsubsection[{fovea}]{\setlength{\rightskip}{0pt plus 5cm}virtual int yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image\+::fovea (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a45024b93bf7734166f69b65f997379ac}
+
+
+get the fovea size (in pixels). 
+
+\begin{DoxyReturn}{Returns}
+the size of the foveal image (square). 
+\end{DoxyReturn}
+\index{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}!get\+Foveal\+Image@{get\+Foveal\+Image}}
+\index{get\+Foveal\+Image@{get\+Foveal\+Image}!yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}}
+\subsubsection[{get\+Foveal\+Image}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image\+::get\+Foveal\+Image (
+\begin{DoxyParamCaption}
+\item[{yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&}]{image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a981721bc337b26a92d4ae3c96024de0d}
+
+
+get the foveal image (a small part of the centre of the image in full resolution). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & is the R\+G\+B image containing the foveal image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff successful. 
+\end{DoxyReturn}
+\index{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}!get\+Logpolar\+Image@{get\+Logpolar\+Image}}
+\index{get\+Logpolar\+Image@{get\+Logpolar\+Image}!yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}}
+\subsubsection[{get\+Logpolar\+Image}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image\+::get\+Logpolar\+Image (
+\begin{DoxyParamCaption}
+\item[{yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&}]{image}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a8c95330ca7dfdea6b5abf8e3d8c238d8}
+
+
+get the logpolar image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & is the R\+G\+B image containing the logpolar subsampled image. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff successful. 
+\end{DoxyReturn}
+\index{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}!nang@{nang}}
+\index{nang@{nang}!yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}}
+\subsubsection[{nang}]{\setlength{\rightskip}{0pt plus 5cm}virtual int yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image\+::nang (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a5ed45249a89ab14317711f3a7b805805}
+
+
+get the number of angles. 
+
+\begin{DoxyReturn}{Returns}
+the number of angles of the logpolar image. 
+\end{DoxyReturn}
+\index{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}!necc@{necc}}
+\index{necc@{necc}!yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}}
+\subsubsection[{necc}]{\setlength{\rightskip}{0pt plus 5cm}virtual int yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image\+::necc (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a4adb5af9e66c11d5ac044ac3cda8d27a}
+
+
+get the number of eccentricities. 
+
+\begin{DoxyReturn}{Returns}
+the number of eccentricities of the logpolar image. 
+\end{DoxyReturn}
+\index{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}!overlap@{overlap}}
+\index{overlap@{overlap}!yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image@{yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image}}
+\subsubsection[{overlap}]{\setlength{\rightskip}{0pt plus 5cm}virtual double yarp\+::dev\+::\+I\+Logpolar\+Frame\+Grabber\+Image\+::overlap (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{classyarp_1_1dev_1_1ILogpolarFrameGrabberImage_a5d11be9916d9d4bdddd0c6f44f066de8}
+
+
+get the overlap between receptive fields. 
+
+\begin{DoxyReturn}{Returns}
+the size of the overlap (double). 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/dev/icub-\/contrib-\/iit/logpolar/lib/include/i\+Cub/logpolar/\hyperlink{LogpolarInterfaces_8h}{Logpolar\+Interfaces.\+h}\end{DoxyCompactItemize}

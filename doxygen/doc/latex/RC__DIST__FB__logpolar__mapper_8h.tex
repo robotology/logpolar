@@ -1,0 +1,57 @@
+\section{C\+:/dev/icub-\/contrib-\/iit/logpolar/lib/include/i\+Cub/logpolar/\+R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.h File Reference}
+\label{RC__DIST__FB__logpolar__mapper_8h}\index{C\+:/dev/icub-\/contrib-\/iit/logpolar/lib/include/i\+Cub/logpolar/\+R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h@{C\+:/dev/icub-\/contrib-\/iit/logpolar/lib/include/i\+Cub/logpolar/\+R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h}}
+
+
+The Log Polar library contains the functions for tranforming between cartesian and log polar images.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$yarp/sig/\+Image.\+h$>$}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structiCub_1_1logpolar_1_1cart2LpPixel}{i\+Cub\+::logpolar\+::cart2\+Lp\+Pixel}
+\begin{DoxyCompactList}\small\item\em It contains the look-\/up table for the creation of a log polar image. \end{DoxyCompactList}\item 
+struct \hyperlink{structiCub_1_1logpolar_1_1lp2CartPixel}{i\+Cub\+::logpolar\+::lp2\+Cart\+Pixel}
+\begin{DoxyCompactList}\small\item\em It contains the look-\/up table for the remapping of a log polar image into a cartesian one. \end{DoxyCompactList}\item 
+class \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform}{i\+Cub\+::logpolar\+::logpolar\+Transform}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform}{logpolar\+Transform} class; a simple collection of logpolar mapping functions, methods, tables, etc. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelogpolar}{logpolar}
+\begin{DoxyCompactList}\small\item\em The logpolar library namespace and some utility functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries R\+A\+D\+I\+A\+L} = 0, 
+{\bfseries T\+A\+N\+G\+E\+N\+T\+I\+A\+L} = 1, 
+{\bfseries E\+L\+L\+I\+P\+T\+I\+C\+A\+L} = 2
+ \}\label{namespaceiCub_1_1logpolar_a6756b64c44301a6ef09e3de7d3d2ae77}
+
+\item 
+enum \{ {\bfseries C2\+L} = 1, 
+{\bfseries L2\+C} = 2, 
+{\bfseries B\+O\+T\+H} = 3
+ \}\label{namespaceiCub_1_1logpolar_a2d212a99632ec74ff18d7d6c01a18d7d}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries i\+Cub\+::logpolar\+::replicate\+Border\+Logpolar} (yarp\+::sig\+::\+Image \&dest, const yarp\+::sig\+::\+Image \&src, int maxkernelsize)
+\begin{DoxyCompactList}\small\item\em replicate borders on a logpolar image before filtering (similar in spirit to I\+P\+P or Open\+C\+V replication). \end{DoxyCompactList}\item 
+bool {\bfseries i\+Cub\+::logpolar\+::subsample\+Fovea} (yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&dst, const yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&src)
+\begin{DoxyCompactList}\small\item\em make an image of the fovea starting from the original cartesian image. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const double {\bfseries i\+Cub\+::logpolar\+::\+P\+I} = 3.\+1415926535897932384626433832795\label{namespaceiCub_1_1logpolar_a020c8ca4d2e250812e57b126683c6a80}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The Log Polar library contains the functions for tranforming between cartesian and log polar images. 
+

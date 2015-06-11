@@ -1,0 +1,437 @@
+\section{i\+Cub\+:\+:logpolar\+:\+:logpolar\+Transform Class Reference}
+\label{classiCub_1_1logpolar_1_1logpolarTransform}\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+
+
+The \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform}{logpolar\+Transform} class; a simple collection of logpolar mapping functions, methods, tables, etc.  
+
+
+
+
+{\ttfamily \#include $<$R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_ab7d0add8a8404a0d2a02e84bd58de37b}{logpolar\+Transform} ()\label{classiCub_1_1logpolar_1_1logpolarTransform_ab7d0add8a8404a0d2a02e84bd58de37b}
+
+\begin{DoxyCompactList}\small\item\em default constructor. \end{DoxyCompactList}\item 
+virtual \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_a5a90b054f53f3670f52dd710025c2a9e}{$\sim$logpolar\+Transform} ()\label{classiCub_1_1logpolar_1_1logpolarTransform_a5a90b054f53f3670f52dd710025c2a9e}
+
+\begin{DoxyCompactList}\small\item\em destructor \end{DoxyCompactList}\item 
+virtual const bool \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_a3afbae8f7933e76fa503f8c5e77caeb3}{allocated} () const 
+\begin{DoxyCompactList}\small\item\em check whether the L\+U\+T have been previously allocated. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_a7f60edc9c92c3998832f7cb926b52baf}{alloc\+Lookup\+Tables} (int \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_a5fb489dfcc4689977725ff5ee1cbda64}{mode}=B\+O\+T\+H, int \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_a2bdd1dc52cc95563fb230f2c3aa83a4a}{necc}=152, int \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_af4f6a4707db1490c17ef3a118da6b75c}{nang}=252, int w=640, int h=480, double \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_ac49732902b31db12de79406170faad25}{overlap}=1.)
+\begin{DoxyCompactList}\small\item\em alloc the lookup tables and stores them in memory. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_ad0d5f20353dc975651b4acc4bef8a62d}{free\+Lookup\+Tables} ()
+\begin{DoxyCompactList}\small\item\em free the lookup tables from memory. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_ad18d083dcb4dbf5df2e44032bc19eeb3}{cart\+To\+Logpolar} (yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&lp, const yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&cart)
+\begin{DoxyCompactList}\small\item\em converts an image from rectangular to logpolar. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_ac34816fd26d3c5d50da9c80e70d38b7e}{logpolar\+To\+Cart} (yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&cart, const yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&lp)
+\begin{DoxyCompactList}\small\item\em converts an image from logpolar to cartesian (rectangular). \end{DoxyCompactList}\item 
+int \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_a2bdd1dc52cc95563fb230f2c3aa83a4a}{necc} (void) const 
+\begin{DoxyCompactList}\small\item\em check the number of eccentricities (rings). \end{DoxyCompactList}\item 
+int \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_af4f6a4707db1490c17ef3a118da6b75c}{nang} (void) const 
+\begin{DoxyCompactList}\small\item\em check the number of angles (radii). \end{DoxyCompactList}\item 
+int \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_aa2442f30a80cb2c03224c7bbef2c4a4b}{width} (void) const 
+\begin{DoxyCompactList}\small\item\em check the width of the original or remapped cartesian image. \end{DoxyCompactList}\item 
+int \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_a2fe0ed5bfad6cc4b57ed46387c9ad204}{height} (void) const 
+\begin{DoxyCompactList}\small\item\em check the height of the original or remapped cartesian image. \end{DoxyCompactList}\item 
+double \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_ac49732902b31db12de79406170faad25}{overlap} (void) const 
+\begin{DoxyCompactList}\small\item\em return the desired overlap btw receptive fields. \end{DoxyCompactList}\item 
+int \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_a5fb489dfcc4689977725ff5ee1cbda64}{mode} (void) const 
+\begin{DoxyCompactList}\small\item\em return the operating mode, one of B\+O\+T\+H, C2\+L, L2\+C. \end{DoxyCompactList}\item 
+double \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform_a44f14f2dfccdc81314b2524d7e11842e}{compute\+Scale\+Factor} (void)
+\begin{DoxyCompactList}\small\item\em computes the ratio between the size of the smallest logpolar pixel and the cartesian one. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{classiCub_1_1logpolar_1_1logpolarTransform}{logpolar\+Transform} class; a simple collection of logpolar mapping functions, methods, tables, etc. 
+
+Definition at line 134 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!allocated@{allocated}}
+\index{allocated@{allocated}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{allocated}]{\setlength{\rightskip}{0pt plus 5cm}virtual const bool i\+Cub\+::logpolar\+::logpolar\+Transform\+::allocated (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_a3afbae8f7933e76fa503f8c5e77caeb3}
+
+
+check whether the L\+U\+T have been previously allocated. 
+
+\begin{DoxyReturn}{Returns}
+true iff one or both L\+U\+Ts are different from zero. 
+\end{DoxyReturn}
+
+
+Definition at line 249 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+\begin{DoxyCode}
+249                                          \{
+250         \textcolor{keywordflow}{if} (c2lTable != 0 || l2cTable != 0)
+251             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+252         \textcolor{keywordflow}{else}
+253             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+254     \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!alloc\+Lookup\+Tables@{alloc\+Lookup\+Tables}}
+\index{alloc\+Lookup\+Tables@{alloc\+Lookup\+Tables}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{alloc\+Lookup\+Tables}]{\setlength{\rightskip}{0pt plus 5cm}bool logpolar\+Transform\+::alloc\+Lookup\+Tables (
+\begin{DoxyParamCaption}
+\item[{int}]{mode = {\ttfamily BOTH}, }
+\item[{int}]{necc = {\ttfamily 152}, }
+\item[{int}]{nang = {\ttfamily 252}, }
+\item[{int}]{w = {\ttfamily 640}, }
+\item[{int}]{h = {\ttfamily 480}, }
+\item[{double}]{overlap = {\ttfamily 1.}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_a7f60edc9c92c3998832f7cb926b52baf}
+
+
+alloc the lookup tables and stores them in memory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em necc} & is the number of eccentricities of the logpolar image. \\
+\hline
+{\em nang} & is the number of angles of the logpolar image. \\
+\hline
+{\em w} & is the width of the original rectangular image. \\
+\hline
+{\em h} & is the height of the original rectangular image. \\
+\hline
+{\em overlap} & is the degree of overlap of the receptive fields ($>$0.). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff successful. 
+\end{DoxyReturn}
+
+
+Definition at line 114 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+cpp.
+
+
+\begin{DoxyCode}
+114                                                                                                     \{
+115     \textcolor{comment}{//}
+116     \textcolor{keywordflow}{if} (allocated()) \{
+117         \textcolor{comment}{// check, return false in case size has changed. need to manually free and recompute maps.}
+118         \textcolor{keywordflow}{if} (mode != mode\_ || necc != necc\_ || nang != nang\_ || w != width\_ || h != height\_ || 
+      overlap != overlap\_) \{
+119             cerr << \textcolor{stringliteral}{"logpolarTransform: new size differ from previously allocated maps"} << endl;
+120             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+121         \}
+122 
+123         cerr << \textcolor{stringliteral}{"logpolarTransform: tried a reallocation of already configured maps, no action taken"} << 
+      endl;
+124         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+125     \}
+126 
+127     necc\_ = necc;
+128     nang\_ = nang;
+129     width\_ = w;
+130     height\_ = h;
+131     overlap\_ = overlap;
+132     mode\_ = mode;
+133     \textcolor{keyword}{const} \textcolor{keywordtype}{double} scaleFact = RCcomputeScaleFactor ();    
+134     
+135     \textcolor{keywordflow}{if} (c2lTable == 0 && (mode & C2L)) \{
+136         c2lTable = \textcolor{keyword}{new} cart2LpPixel[necc*nang];
+137         \textcolor{keywordflow}{if} (c2lTable == 0) \{
+138             cerr << \textcolor{stringliteral}{"logpolarTransform: can't allocate c2l lookup tables, wrong size?"} << endl;
+139             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+140         \}
+141 
+142         RCbuildC2LMap (scaleFact, ELLIPTICAL, PAD\_BYTES(w*3, YARP\_IMAGE\_ALIGN));
+143     \}
+144 
+145     \textcolor{keywordflow}{if} (l2cTable == 0 && (mode & L2C)) \{
+146         l2cTable = \textcolor{keyword}{new} lp2CartPixel[w*h];
+147         \textcolor{keywordflow}{if} (l2cTable == 0) \{
+148             cerr << \textcolor{stringliteral}{"logPolarLibrary: can't allocate l2c lookup tables, wrong size?"} << endl;
+149             \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+150         \}
+151 
+152         RCbuildL2CMap (scaleFact, 0, 0, ELLIPTICAL, PAD\_BYTES(nang*3, YARP\_IMAGE\_ALIGN));
+153     \}
+154     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+155 \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!cart\+To\+Logpolar@{cart\+To\+Logpolar}}
+\index{cart\+To\+Logpolar@{cart\+To\+Logpolar}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{cart\+To\+Logpolar}]{\setlength{\rightskip}{0pt plus 5cm}bool logpolar\+Transform\+::cart\+To\+Logpolar (
+\begin{DoxyParamCaption}
+\item[{yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&}]{lp, }
+\item[{const yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&}]{cart}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_ad18d083dcb4dbf5df2e44032bc19eeb3}
+
+
+converts an image from rectangular to logpolar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lp} & is the logpolar image (destination). \\
+\hline
+{\em cart} & is the cartesian image (source data). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff successful. Beware that tables must be allocated in advance. 
+\end{DoxyReturn}
+
+
+Definition at line 165 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+cpp.
+
+
+\begin{DoxyCode}
+166                                                                                     \{
+167     \textcolor{keywordflow}{if} (!(mode\_ & C2L)) \{
+168         cerr << \textcolor{stringliteral}{"logPolarLibrary: conversion to logpolar called with wrong mode set"} << endl;
+169         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+170     \}
+171 
+172     \textcolor{comment}{// LATER: assert whether lp & cart are effectively nang * necc as the c2lTable requires.}
+173     RCgetLpImg (lp.getRawImage(), (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *)cart.getRawImage(), c2lTable, lp.getPadding());
+174     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+175 \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!compute\+Scale\+Factor@{compute\+Scale\+Factor}}
+\index{compute\+Scale\+Factor@{compute\+Scale\+Factor}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{compute\+Scale\+Factor}]{\setlength{\rightskip}{0pt plus 5cm}double i\+Cub\+::logpolar\+::logpolar\+Transform\+::compute\+Scale\+Factor (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_a44f14f2dfccdc81314b2524d7e11842e}
+
+
+computes the ratio between the size of the smallest logpolar pixel and the cartesian one. 
+
+W\+A\+R\+N\+I\+N\+G\+: this method is deprecated and maintained only for compatibility with old code. \begin{DoxyReturn}{Returns}
+the scale factor. 
+\end{DoxyReturn}
+
+
+Definition at line 334 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+\begin{DoxyCode}
+334                                     \{
+335         \textcolor{keywordflow}{return} RCcomputeScaleFactor();
+336     \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!free\+Lookup\+Tables@{free\+Lookup\+Tables}}
+\index{free\+Lookup\+Tables@{free\+Lookup\+Tables}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{free\+Lookup\+Tables}]{\setlength{\rightskip}{0pt plus 5cm}bool logpolar\+Transform\+::free\+Lookup\+Tables (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_ad0d5f20353dc975651b4acc4bef8a62d}
+
+
+free the lookup tables from memory. 
+
+\begin{DoxyReturn}{Returns}
+true iff successful. 
+\end{DoxyReturn}
+
+
+Definition at line 157 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+cpp.
+
+
+
+Referenced by $\sim$logpolar\+Transform().
+
+
+\begin{DoxyCode}
+157                                          \{
+158     \textcolor{keywordflow}{if} (c2lTable)
+159         RCdeAllocateC2LTable ();
+160     \textcolor{keywordflow}{if} (l2cTable)
+161         RCdeAllocateL2CTable ();
+162     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+163 \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!height@{height}}
+\index{height@{height}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Cub\+::logpolar\+::logpolar\+Transform\+::height (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_a2fe0ed5bfad6cc4b57ed46387c9ad204}
+
+
+check the height of the original or remapped cartesian image. 
+
+\begin{DoxyReturn}{Returns}
+the height of the cartesian image (default = 480). 
+\end{DoxyReturn}
+
+
+Definition at line 315 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+\begin{DoxyCode}
+315 \{ \textcolor{keywordflow}{return} height\_; \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!logpolar\+To\+Cart@{logpolar\+To\+Cart}}
+\index{logpolar\+To\+Cart@{logpolar\+To\+Cart}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{logpolar\+To\+Cart}]{\setlength{\rightskip}{0pt plus 5cm}bool logpolar\+Transform\+::logpolar\+To\+Cart (
+\begin{DoxyParamCaption}
+\item[{yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&}]{cart, }
+\item[{const yarp\+::sig\+::\+Image\+Of$<$ yarp\+::sig\+::\+Pixel\+Rgb $>$ \&}]{lp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_ac34816fd26d3c5d50da9c80e70d38b7e}
+
+
+converts an image from logpolar to cartesian (rectangular). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cart} & is the cartesian image (destination). \\
+\hline
+{\em lp} & is the logpolar image (source). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff successful. Beware that tables must be allocated in advance. 
+\end{DoxyReturn}
+
+
+Definition at line 177 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+cpp.
+
+
+\begin{DoxyCode}
+178                                                                        \{
+179     \textcolor{keywordflow}{if} (!(mode\_ & L2C)) \{
+180         cerr << \textcolor{stringliteral}{"logPolarLibrary: conversion to cartesian called with wrong mode set"} << endl;
+181         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+182     \}
+183 
+184     \textcolor{comment}{// LATER: assert whether lp & cart are effectively of the correct size.}
+185     RCgetCartImg (cart.getRawImage(), lp.getRawImage(), l2cTable, cart.getPadding());
+186 
+187     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+188 \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!mode@{mode}}
+\index{mode@{mode}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{mode}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Cub\+::logpolar\+::logpolar\+Transform\+::mode (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_a5fb489dfcc4689977725ff5ee1cbda64}
+
+
+return the operating mode, one of B\+O\+T\+H, C2\+L, L2\+C. 
+
+\begin{DoxyReturn}{Returns}
+the value of mode (default = B\+O\+T\+H). 
+\end{DoxyReturn}
+
+
+Definition at line 327 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+\begin{DoxyCode}
+327 \{ \textcolor{keywordflow}{return} mode\_; \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!nang@{nang}}
+\index{nang@{nang}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{nang}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Cub\+::logpolar\+::logpolar\+Transform\+::nang (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_af4f6a4707db1490c17ef3a118da6b75c}
+
+
+check the number of angles (radii). 
+
+\begin{DoxyReturn}{Returns}
+the number of radii in the logpolar mapping (default 252). 
+\end{DoxyReturn}
+
+
+Definition at line 303 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+\begin{DoxyCode}
+303 \{ \textcolor{keywordflow}{return} nang\_; \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!necc@{necc}}
+\index{necc@{necc}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{necc}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Cub\+::logpolar\+::logpolar\+Transform\+::necc (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_a2bdd1dc52cc95563fb230f2c3aa83a4a}
+
+
+check the number of eccentricities (rings). 
+
+\begin{DoxyReturn}{Returns}
+the number of rings in the logpolar mapping (default 152). 
+\end{DoxyReturn}
+
+
+Definition at line 297 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+\begin{DoxyCode}
+297 \{ \textcolor{keywordflow}{return} necc\_; \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!overlap@{overlap}}
+\index{overlap@{overlap}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{overlap}]{\setlength{\rightskip}{0pt plus 5cm}double i\+Cub\+::logpolar\+::logpolar\+Transform\+::overlap (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_ac49732902b31db12de79406170faad25}
+
+
+return the desired overlap btw receptive fields. 
+
+\begin{DoxyReturn}{Returns}
+the desired overlap (default = 1.\+0). 
+\end{DoxyReturn}
+
+
+Definition at line 321 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+\begin{DoxyCode}
+321 \{ \textcolor{keywordflow}{return} overlap\_; \}
+\end{DoxyCode}
+\index{i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}!width@{width}}
+\index{width@{width}!i\+Cub\+::logpolar\+::logpolar\+Transform@{i\+Cub\+::logpolar\+::logpolar\+Transform}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Cub\+::logpolar\+::logpolar\+Transform\+::width (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classiCub_1_1logpolar_1_1logpolarTransform_aa2442f30a80cb2c03224c7bbef2c4a4b}
+
+
+check the width of the original or remapped cartesian image. 
+
+\begin{DoxyReturn}{Returns}
+the width of the cartesian image (defualt = 640). 
+\end{DoxyReturn}
+
+
+Definition at line 309 of file R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h.
+
+
+\begin{DoxyCode}
+309 \{ \textcolor{keywordflow}{return} width\_; \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/dev/icub-\/contrib-\/iit/logpolar/lib/include/i\+Cub/logpolar/\hyperlink{RC__DIST__FB__logpolar__mapper_8h}{R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+h}\item 
+C\+:/dev/icub-\/contrib-\/iit/logpolar/lib/src/\hyperlink{RC__DIST__FB__logpolar__mapper_8cpp}{R\+C\+\_\+\+D\+I\+S\+T\+\_\+\+F\+B\+\_\+logpolar\+\_\+mapper.\+cpp}\end{DoxyCompactItemize}
