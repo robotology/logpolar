@@ -9,6 +9,10 @@ set(headers include/iCub/logpolar/LogpolarInterfaces.h
 source_group("Header Files" FILES ${headers})
 source_group("Source Files" FILES ${sources})
 
+if(UNIX)
+    set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -fPIC)
+endif()
+
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include ${YARP_INCLUDE_DIRS})
 add_library(logpolar ${headers} ${sources})
 target_link_libraries(logpolar ${YARP_LIBRARIES})
