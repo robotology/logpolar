@@ -16,6 +16,7 @@
  * @author Giorgio Metta
  */
 
+#include <memory.h>
 #include <cstdio>
 #include <string>
 
