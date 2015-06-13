@@ -9,8 +9,8 @@
 ### Documentation
 On the science behind the logpolar mapping please read this [tutorial](https://github.com/robotology/logpolar/blob/gh-pages/lp_geometry/LogPolarManual.pdf).
 
-For online documentation of all the methods composing the D4C Library,
-please refer to the [Doxygen Documentation](http://robotology.github.com/logpolar).
+For online documentation of all the methods please refer to the
+[Doxygen Documentation](http://robotology.github.com/logpolar).
 
 
 ### License
