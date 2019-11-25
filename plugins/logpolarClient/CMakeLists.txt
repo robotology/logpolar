@@ -2,8 +2,8 @@
 # Authors: Ugo Pattacini
 # CopyPolicy: Released under the terms of the GNU GPL v3.0.
 
-yarp_prepare_device(logpolarclient TYPE yarp::dev::ClientLogpolarFrameGrabber
-                    INCLUDE yarp/dev/ClientLogpolarFrameGrabber.h)
+yarp_prepare_plugin(logpolarclient TYPE yarp::dev::ClientLogpolarFrameGrabber
+                    INCLUDE yarp/dev/ClientLogpolarFrameGrabber.h CATEGORY device Default ON)
 
 if(ENABLE_logpolarclient)
     include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../logpolarGrabber
