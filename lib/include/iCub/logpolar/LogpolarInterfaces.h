@@ -28,7 +28,6 @@
 
 /* dev drivers */
 #include <yarp/dev/FrameGrabberInterfaces.h>
-#include <yarp/dev/ServerFrameGrabber.h>
 
 /* LATER: is it likely that some of these would move into iCub::dev namespace? */
 namespace yarp{
