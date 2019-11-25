@@ -91,7 +91,6 @@ This file can be edited at src/logpolarRemapper/logpolarRemapper.cpp.
 // yarp.
 #include <yarp/sig/all.h>
 #include <yarp/os/RFModule.h>
-#include <yarp/os/Module.h>
 #include <yarp/os/Network.h>
 #include <yarp/dev/PolyDriver.h>
 
