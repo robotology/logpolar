@@ -2,8 +2,8 @@
 # Authors: Ugo Pattacini
 # CopyPolicy: Released under the terms of the GNU GPL v3.0.
 
-yarp_prepare_device(logpolargrabber TYPE yarp::dev::ServerLogpolarFrameGrabber
-                    INCLUDE yarp/dev/ServerLogpolarFrameGrabber.h
+yarp_prepare_plugin(logpolargrabber TYPE yarp::dev::ServerLogpolarFrameGrabber
+                    INCLUDE yarp/dev/ServerLogpolarFrameGrabber.h CATEGORY device
                     WRAPPER logpolargrabber)
 
 if(ENABLE_logpolargrabber)
