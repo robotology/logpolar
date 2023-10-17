@@ -92,32 +92,32 @@ bool LogPolarTransform::configure(yarp::os::ResourceFinder &rf)
 
    numberOfAngles        = rf.check("angles",
                            Value(252),
-                           "Key value (int)").asInt();
+                           "Key value (int)").asInt32();
 
    /* get the number of rings */
 
    numberOfRings         = rf.check("rings",
                            Value(152),
-                           "Key value (int)").asInt();
+                           "Key value (int)").asInt32();
  
    /* get the size of the X dimension */
 
    xSize                 = rf.check("xsize",
                            Value(320),
-                           "Key value (int)").asInt();
+                           "Key value (int)").asInt32();
 
    /* get the size of the Y dimension */
 
    ySize                 = rf.check("ysize",
                            Value(240),
-                           "Key value (int)").asInt();
+                           "Key value (int)").asInt32();
 
 
    /* get the overlap ratio */
 
    overlap               = rf.check("overlap",
                            Value(1.0),
-                           "Key value (int)").asDouble();
+                           "Key value (int)").asFloat64();
 
 
    /* do all initialization here */

@@ -104,7 +104,7 @@ using namespace yarp::dev;
 using namespace iCub::logpolar;
 
 // the default app name (to be used in port names, etc.).
-ConstString defaultname("remapper");
+const string  defaultname("remapper");
 const int defaultSize = 480;
 
 /*
@@ -150,7 +150,7 @@ public:
         remote = ((ResourceFinder&)rf).find("remote").asString();
 
         // LATER: can use the rf.getName() here instead of searching again.
-        ConstString name = ((ResourceFinder&)rf).find("name").asString();
+        const string name = ((ResourceFinder&)rf).find("name").asString();
         local = "/";
         local += ((name != "") ? name : defaultname);
 
@@ -159,8 +159,8 @@ public:
         outname += ((name != "") ? name : defaultname);
         outname += ":out";
 
-        width = ((ResourceFinder&)rf).find("width").asInt();
-        height = ((ResourceFinder&)rf).find("height").asInt();
+        width = ((ResourceFinder&)rf).find("width").asInt32();
+        height = ((ResourceFinder&)rf).find("height").asInt32();
 
         if (width == 0 && height == 0) {
             width = height = defaultSize;
@@ -311,13 +311,13 @@ public:
      * @return true iff successful.
      */
     bool configure(const ResourceFinder& rf) {
-        ConstString name = ((ResourceFinder&)rf).find("name").asString();
+        const string  name = ((ResourceFinder&)rf).find("name").asString();
         if (name != "") {
-            ConstString tmp = ConstString("/") + name  + ":rpc";
+            const string  tmp =  string ("/") + name  + ":rpc";
             handlerPort.open(tmp.c_str());
         }
         else {
-            ConstString tmp = ConstString("/") + defaultname + ":rpc";
+            const string  tmp =  string ("/") + defaultname + ":rpc";
             handlerPort.open(tmp.c_str());
         }
 
