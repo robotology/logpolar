@@ -1,0 +1,80 @@
+<application>
+    <name>Web Cam Logpolar Testing</name>
+
+    <!-- Early Attention Modules -->
+
+
+    <module>
+        <name>yarpdev</name>
+        <parameters> --device usbCamera --name /icub/camcalib/right/out --d /dev/video0 </parameters>
+        <node>localhost</node>
+    </module>
+
+
+    <module>
+        <name>logpolarTransform</name>
+        <parameters>--name logPolarTransform/icub/right_cam --xsize 320 --ysize 240 --direction CARTESIAN2LOGPOLAR</parameters>
+        <node>localhost</node>
+        <tag>rightLogPolarTransform</tag>
+    </module>
+
+    <module>
+        <name>logpolarTransform</name>
+        <parameters>--name logPolarTransform/icub/right_cam/back --xsize 320 --ysize 240 --direction LOGPOLAR2CARTESIAN</parameters>
+        <node>localhost</node>
+        <tag>rightLogPolarTransform</tag>
+    </module>
+
+    <module>
+        <name>yarpview</name>
+        <parameters> --name /view/webcam  </parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>yarpview</name>
+        <parameters> --name /view/log  </parameters>
+        <node>localhost</node>
+    </module>
+
+    <module>
+        <name>yarpview</name>
+        <parameters> --name /view/back  </parameters>
+        <node>localhost</node>
+    </module>
+
+
+    <!-- Connections -->
+    <connection>
+        <from>/icub/camcalib/right/out</from>
+        <to>/logPolarTransform/icub/right_cam/image:i</to>
+        <protocol>udp</protocol>
+    </connection>
+
+    <connection>
+        <from>/icub/camcalib/right/out</from>
+        <to>/view/webcam</to>
+        <protocol>udp</protocol>
+    </connection>
+
+
+
+    <connection>
+        <from>/logPolarTransform/icub/right_cam/image:o</from>
+        <to>/view/log</to>
+        <protocol>udp</protocol>
+    </connection>
+
+    <connection>
+        <from>/logPolarTransform/icub/right_cam/image:o</from>
+        <to>/logPolarTransform/icub/right_cam/back/image:i</to>
+        <protocol>udp</protocol>
+    </connection>
+
+    <connection>
+        <from>/logPolarTransform/icub/right_cam/back/image:o</from>
+        <to>/view/back</to>
+        <protocol>udp</protocol>
+    </connection>
+
+</application>

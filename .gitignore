@@ -32,3 +32,7 @@
 
 # Linux temp files
 *~
+
+# Clion Files
+.idea/*
+cmake-build-debug/*

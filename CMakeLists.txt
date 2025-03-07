@@ -25,6 +25,7 @@ add_definitions(${YARP_DEFINES})
 add_subdirectory(lib)
 add_subdirectory(plugins)
 add_subdirectory(modules)
+add_subdirectory(app)
 
 icubcontrib_finalize_export(logpolar)
 icubcontrib_add_uninstall_target()

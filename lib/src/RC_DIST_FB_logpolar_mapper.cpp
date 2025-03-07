@@ -23,7 +23,6 @@
  * \brief Implementation of the logpolar class.
  */
 
-#include <yarp/sig/IplImage.h>
 #include <iCub/logpolar/RC_DIST_FB_logpolar_mapper.h>
 
 #include <cstring>
@@ -34,6 +33,7 @@ using namespace std;
 using namespace yarp::os;
 using namespace yarp::sig;
 using namespace iCub::logpolar;
+#define 	YARP_IMAGE_ALIGN   8
 
 
 //
